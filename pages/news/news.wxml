@@ -1,0 +1,25 @@
+<!-- 广告轮播图 -->
+<block wx:if="{{!offLine}}">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+        <block wx:for="{{ads}}">
+            <swiper-item>
+                <image src="{{(item!='')?item:'../../img/news/404.png'}}" class="slide-image" mode="aspectFill" bindtap='seeAd' />
+            </swiper-item>
+        </block>
+    </swiper>
+</block>
+
+<!-- 推文 -->
+<view>
+    <block wx:if="{{offLine}}">
+        <i-icon type="prompt_fill" color='#888' size='30' />
+        <text id='offLine'>啊哦，你好像断网了:(\n请检查网络并刷新</text>
+    </block>
+    <block wx:if="{{!offLine}}">
+        <view class='post-card' wx:for="{{posts}}" bindtap='readPost' id='{{item.url}}'>
+            <image class='post-thumb' src='{{(item.thumb!="")?item.image:"../../img/news/404.png"}}' mode="scaleToFill"></image>
+            <text class='post-title'>{{item.title}}</text>
+            <text class='post-subtitle'>{{item.subtitle}}</text>
+        </view>
+    </block>
+</view>

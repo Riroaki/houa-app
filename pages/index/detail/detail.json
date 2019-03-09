@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+      "i-icon": "../../../lib/dist/icon/index",
+      "i-button": "../../../lib/dist/button/index",
+      "i-toast": "../../../lib/dist/toast/index"
+  },
+  "enablePullDownRefresh": false
+}

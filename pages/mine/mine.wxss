@@ -1,0 +1,89 @@
+page {
+    background-color: #F4F4F4;
+}
+
+.divLine {
+    background: #e0e3da;
+    width: 96%;
+    height: 3rpx;
+    margin: 1% auto;
+}
+
+.card {
+    width: 94%;
+    margin: 3%;
+    box-shadow: 2rpx 2rpx 2rpx #888;
+    border-radius: 5rpx;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 3% 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#avator {
+    max-width: 200rpx;
+    max-height: 200rpx;
+}
+
+#user {
+    font-size: 35rpx;
+    font-weight: 600;
+    margin: 15%;
+}
+
+#applyRow {
+    width: 94%;
+    margin: 3%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#companyThumb {
+    max-height: 100rpx;
+    max-width: 100rpx;
+}
+
+i-steps {
+    flex: 1;
+}
+
+.before {
+    height: 40rpx;
+    width: 20rpx;
+    margin: 0 3%;
+    background-color: #21b046;
+}
+
+.heading {
+    font-size: 30rpx;
+    font-weight: 600;
+    white-space: nowrap;/*文字溢出后，强制不换行*/
+}
+
+#currentStage {
+    font-size: 25rpx;
+    font-weight: 600;
+    margin: 1% 3% 2%;
+}
+
+.leftRow {
+    width: 94%;
+    margin: 1% 3% 2%;
+}

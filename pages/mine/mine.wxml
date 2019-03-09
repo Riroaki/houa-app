@@ -1,0 +1,90 @@
+<view class='card' id='head'>
+    <!-- 头像和名称、我的简历 -->
+    <view class='row'>
+        <view class='left'>
+            <open-data id='avator' type="userAvatarUrl"></open-data>
+            <open-data id='user' type="userNickName" lang="zh_CN"></open-data>
+        </view>
+        <view class='right' bindtap='seeResume'>
+            <text class='heading'>我的简历</text>
+            <i-icon type="enter" color='black' size='20' />
+        </view>
+    </view>
+    <view class="divLine"></view>
+    <!-- 申请状态、更多 -->
+    <view class='row'>
+        <view class='left'>
+            <view class='before'></view>
+            <text class='heading'>\t申请状态</text>
+        </view>
+        <view bindtap="seeMoreStages">
+            <text class='heading'>更多</text>
+            <i-icon type="enter" color='black' size='20' />
+        </view>
+    </view>
+    <!-- 公司thumb、步骤进度 -->
+    <view id='applyRow'>
+        <image id='companyThumb' src='{{currentStages[0].thumb}}'></image>
+        <!-- 进度条 -->
+        <i-steps>
+            <i-step status="finish" icon="mail">
+                <view slot="title">
+                    {{stages[0]}}
+                </view>
+            </i-step>
+            <i-step status="finish" icon="browse">
+                <view slot="title">
+                    {{stages[1]}}
+                </view>
+            </i-step>
+            <i-step status="process" icon="right">
+                <view slot="title">
+                    {{stages[2]}}
+                </view>
+            </i-step>
+            <i-step icon="task">
+                <view slot="title">
+                    {{stages[3]}}
+                </view>
+            </i-step>
+            <i-step icon="collection" icon="tasklist">
+                <view slot="title">
+                    {{stages[4]}}
+                </view>
+            </i-step>
+        </i-steps>
+    </view>
+
+    <view class="divLine"></view>
+
+    <text id='currentStage'>当前没有动态哦</text>
+</view>
+
+<view class='card' id='record'>
+    <view class='leftRow' bindtap="seeMore" id='favor'>
+        <i-icon type="collection_fill" size='25' color='#F5A623' />
+        <text class='heading'>我的收藏</text>
+    </view>
+    <view class="divLine"></view>
+    <view class='leftRow' bindtap='seeMore' id='history'>
+        <i-icon type="browse_fill" size='25' color='#21b046' />
+        <text class='heading'>浏览记录</text>
+    </view>
+</view>
+
+<view class='card' id='talk'>
+    <view class='leftRow' bindtap='saySomething'>
+        <i-icon type="feedback_fill" size='25' color='#F5A623' />
+        <text class='heading'>意见反馈</text>
+    </view>
+    <view class="divLine"></view>
+    <view class='leftRow'>
+        <i-icon type="customerservice" size='25' color='#21b046' />
+        <text class='heading'>猴啊帮帮忙</text>
+    </view>
+    <view class="divLine"></view>
+    <view class='leftRow' bindtap='logOut'>
+        <i-icon type="homepage_fill" size='25' color='#21b046' />
+        <text class='heading'>退出登录</text>
+    </view>
+</view>

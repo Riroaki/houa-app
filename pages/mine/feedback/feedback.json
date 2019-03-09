@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "i-modal": "../../../lib/dist/modal/index"
+  },
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "意见反馈"
+}

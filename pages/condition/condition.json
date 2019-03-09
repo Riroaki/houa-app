@@ -1,0 +1,13 @@
+{
+    "navigationBarTitleText": "猴啊求职",
+    "usingComponents": {
+        "i-tabs": "../../lib/dist/tabs/index",
+        "i-tab": "../../lib/dist/tab/index",
+        "i-index": "../../lib/dist/index/index",
+        "i-index-item": "../../lib/dist/index-item/index",
+        "i-tag": "../../lib/dist/tag/index"
+    },
+    "backgroundColor": "grey",
+    "disableScroll": true,
+    "enablePullDownRefresh": false
+}

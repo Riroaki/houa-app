@@ -1,0 +1,16 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='container'>
+
+    <text class='msg'>{{msg}}</text>
+
+    <button bindtap="taphr" class="imhr" hover-class='hr-hover' open-type='getUserInfo'>
+        找精英
+    </button>
+
+    <image class='offer' src='../../img/welcome/offer.png' mode='widthFix'></image>
+
+    <button bindtap='tapjh' class='imjh' hover-class='jh-hover' open-type='getUserInfo'>
+        我来斩offer
+    </button>
+
+</view>

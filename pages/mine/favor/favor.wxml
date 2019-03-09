@@ -1,0 +1,37 @@
+<!-- 下拉刷新成功提示 -->
+<i-toast id="toast" />
+
+<!-- 断网提示 -->
+<block wx:if="{{offLine}}">
+    <i-icon type="prompt_fill" color='#888' size='30' />
+    <text id='offLine'>啊哦，你好像断网了:(\n请检查网络并刷新</text>
+</block>
+
+<!-- 实习卡片 -->
+<block ws:if="{{!offLine}}">
+    <view class='job-card' wx:for="{{jobList}}" bindtap='seeDetails' id='{{item.uid}}'>
+        <image src='{{item.thumb}}' class='thumb'></image>
+        <view class='card-details'>
+            <!-- 第一行 -->
+            <view class='firstRow'>
+                <!-- 将tag和title绑定在一起作为一块，然后flex均分 -->
+                <view class='card-title-tags'>
+                    <text class='card-title'>{{item.name}}</text>
+                    <block wx:if="{{item.isUrgent}}">
+                        <image class='urgentTag' src='../../../img/index/urgent.png'></image>
+                    </block>
+                    <block wx:if="{{item.isTop}}">
+                        <image class='topTag' src='../../../img/index/top.png'></image>
+                    </block>
+                </view>
+                <text class='card-viewed'>{{"浏览" + item.viewed}}</text>
+            </view>
+            <!-- 第二行 -->
+            <view class='secondRow'>
+                <text class='card-place'>{{item.place}}</text>
+                <text class='card-salary'>{{item.salary}}</text>
+                <text class='card-workload'>{{item.workload}}</text>
+            </view>
+        </view>
+    </view>
+</block>

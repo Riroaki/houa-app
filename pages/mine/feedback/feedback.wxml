@@ -1,0 +1,7 @@
+<i-modal title="猴啊已经收到你的反馈" visible="{{ visible }}" actions="{{ actions }}" bind:click="handleClose">
+    <view>我们会做的更好</view>
+</i-modal>
+
+<textarea placeholder='亲，有什么想对猴啊说的嘛？' value='{{content}}' bindinput='getContent'></textarea>
+
+<button class='submitBtn' hover-class='submitBtn-hover' bindtap='submit'>提交</button>

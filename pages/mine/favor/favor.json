@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "i-toast": "../../../lib/dist/toast/index"
+    },
+    "enablePullDownRefresh": false
+}

@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "i-icon": "../../lib/dist/icon/index"
+    },
+    "enablePullDownRefresh": false
+}

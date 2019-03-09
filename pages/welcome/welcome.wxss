@@ -1,0 +1,62 @@
+/* pages/welcome/welcome.wxss */
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10% 0;
+    text-emphasis: true;
+    top: 0;
+}
+
+.msg {
+    font-weight: bold;
+}
+
+.imhr {
+    width: 30%;
+    margin: 10% 30% 0;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 5px 20px 1px rgb(214, 214, 214);
+}
+
+.imhr::after {
+    border-radius: 20px;
+    border: none;
+}
+
+.hr-hover {
+    background-color: rgb(214, 214, 214);
+}
+
+.imjh {
+    width: 80%;
+    margin: 10% 10%;
+    border-radius: 40px;
+    border: none;
+    background-color: #21b046;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 20px 1px rgb(214, 214, 214);
+}
+
+.imjh::after {
+    border-radius: 40px;
+    border: none;
+}
+
+.jh-hover {
+    background-color: #025f16;
+}
+
+.offer {
+    width: 60%;
+    margin: 5% 23% 0 27%;
+}

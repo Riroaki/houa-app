@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "i-icon": "../../lib/dist/icon/index",
+        "i-steps": "../../lib/dist/steps/index",
+        "i-step": "../../lib/dist/step/index"
+    },
+    "enablePullDownRefresh": false
+}

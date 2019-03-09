@@ -1,0 +1,135 @@
+page {
+    background-color: #F4F4F4;
+}
+
+@import "../../lib/wxSearch/wxSearch.wxss";
+
+view.wxSearch-section {
+    display: flex;
+    flex-direction: row;
+    height: 80rpx;
+    background-color: #21b046;
+    border: none;
+    align-items: center;
+}
+
+view.wxSearch-pancel {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    flex-direction: row;
+    border-radius: 40rpx;
+    margin-right: 10rpx;
+    margin-left: 10rpx;
+}
+
+view.wxSearch-pancel image {
+    height: 42rpx;
+    width: 42rpx;
+    align-self: center;
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+}
+
+view.wxSearch-pancel input {
+    flex: 1;
+    font-size: 30rpx;
+}
+
+.wxSearch-section {
+    background-color: #21b046;
+    border: none;
+    height: 100%;
+}
+
+.wxSearch-input {
+    border-radius: 20px;
+}
+
+.wxSearch-input::after {
+    border-radius: 20px;
+}
+
+.wxSearch-button {
+    font-size: medium;
+}
+
+.tabs {
+    position: relative;
+    margin: 0 0 5%;
+}
+
+/* 求职卡片 */
+
+.job-card {
+    width: 94%;
+    margin: 3%;
+    box-shadow: 2rpx 2rpx 2rpx #888;
+    border-radius: 10rpx;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.thumb {
+    max-width: 120rpx;
+    max-height: 120rpx;
+    margin: 3%;
+    left: 0;
+}
+
+.card-details {
+    width: 100%;
+    height: 100%;
+    margin-right: 5%;
+}
+
+.firstRow, .secondRow {
+    margin-top: 5%;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.urgentTag, .topTag {
+    max-width: 70rpx;
+    max-height: 35rpx;
+    margin: 4rpx 2px 0 2px;
+}
+
+.card-title {
+    font-size: 35rpx;
+    font-weight: 900;
+    color: black;
+}
+
+.card-viewed {
+    font-size: 25rpx;
+    font-weight: 600;
+    color: #B2B2B2;
+    align-self: flex-end;
+}
+
+.card-place, .card-salary {
+    font-size: 25rpx;
+    font-weight: 400;
+    color: grey;
+}
+
+.card-workload {
+    font-size: 25rpx;
+    font-weight: 600;
+    color: gray;
+}
+
+/* .no-more {
+    text-align: center;
+    font-size: 24rpx;
+    padding-bottom: 48rpx;
+    color: #999;
+} */
+

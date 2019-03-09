@@ -1,0 +1,22 @@
+<!-- 左侧索引选择器 -->
+<view class="choiceList">
+    <i-index height="100%" bind:change="onChange">
+        <i-index-item wx:for="{{ choices }}" wx:for-index="index" wx:key="{{index}}" wx:for-item="item" name="{{item.key}}" bindtap='tapItem'>
+            <view class="choice" wx:for="{{item.list}}" wx:for-index="in" wx:key="{{in}}" wx:for-item="it">
+                {{it.name}}
+            </view>
+        </i-index-item>
+    </i-index>
+</view>
+
+<!-- 右侧选择情况 -->
+<view class="chosenList">
+    <i-tag class="tag" wx:for="{{tags}}" wx:key="{{index}}" bindchange="onTagChange" checkable="{{true}}" name="{{index}}" color="green" checked="{{item.checked}}" type="border">
+        {{item.name}}
+    </i-tag>
+</view>
+<view style='clear: both'></view>
+
+<!-- 两个底部按钮 -->
+<button hover-class='clear-hover' class="clearBtn" bindtap='clearTags'>重置</button>
+<button hover-class='select-hover' class="selectBtn" bindtap='returnAndSearch'>筛选</button>

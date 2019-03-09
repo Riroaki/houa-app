@@ -1,0 +1,95 @@
+<!--pages/index/detail.wxml-->
+<view id='container'>
+    <view style='float:left;display:inline-block'>
+        <text id='title'>{{title}}\n</text>
+        <i-icon type="coordinates_fill" size="20" color="#21b046" />
+        <text id='place'>{{place}}\n</text>
+    </view>
+
+    <view style='float:right;display:inline-block'>
+        <text id='salary'>{{salary}}\n</text>
+        <text id='workload'>{{workload}}\n</text>
+    </view>
+
+    <view style='clear:both'>\n</view>
+
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+
+    <view id='middle'>
+        <!-- 靠左侧的图片和内容 -->
+        <view style='float:left'>
+            <image id='logo' src='{{pic}}'></image>
+            <!-- 在同一行排列 -->
+            <view id='submitArea'>
+                <text id='submitTitle'>投递方式\n</text>
+                <text id='email'>{{email}}\n</text>
+                <text id='submitContent'>{{instruct}}</text>
+            </view>
+        </view>
+        <!-- 靠右的按钮 -->
+        <button bindtap='copy' id='copyBtn'>复制</button>
+        <view style='clear:both'></view>
+    </view>
+
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+    <i-icon type="other" size='30' color='#21b046' />
+    <text id='detailTitle'>职位详情\n</text>
+    <text id='detailContent'>{{description}}</text>
+
+</view>
+
+<view id='buttonGroup'>
+    <!-- 收藏 -->
+    <block wx:if="{{!isFavored}}">
+        <i-icon class='icon' bindtap='favor' type="collection" size="32" color='#888' />
+    </block>
+    <block wx:if="{{isFavored}}">
+        <i-icon class='icon' bindtap='favor' type="collection_fill" size="32" color='#F5A623' />
+    </block>
+    <!-- 分享 -->
+    <i-icon class='icon' bindtap='share' type="send" size="32" color='#888' />
+    <!-- 举报 -->
+    <i-icon class='icon' bindtap='report' type="warning" size="32" color='#888' />
+
+    <image id='recommand' src='../../../img/index/detail/recommand.png'></image>
+    <button id='submit' bindtap='submit'  hover-class='submit-hover' plain='true'>一键直投
+        <text id='tip' bindtap='submit'>（投递动态实时更新）</text>
+    </button>
+</view>
+
+<view id='iconTextGroup'>
+    <block wx:if="{{!isFavored}}">
+        <text class='iconText' style='color:#888'>收藏</text>
+    </block>
+    <block wx:if="{{isFavored}}">
+        <text class='iconText' style='color:#F5A623;margin:0 3% 0 1%;'>已收藏</text>
+    </block>
+    <text class='iconText'>分享</text>
+    <text class='iconText'>举报</text>
+</view>
+
+<!-- 投递成功提示 -->
+<i-toast id="toast" />
+
+<!-- 投递简历弹出窗口 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showSubmitModal}}"></view>
+<view class="modal-dialog" wx:if="{{showSubmitModal}}">
+    <view class="modal-content">
+        <!-- 简历列表 -->
+        <view class='resumeRow' wx:for='{{resumes}}' bindtap='selectResume' id='{{index}}'>
+            <text class="modal-title">{{item.name}}</text>
+            <text class='modal-description'>{{item.description}}</text>
+            <block wx:if='{{currentSelectId===index}}'>
+                <icon type="success" size="20" color='#21b046' />
+            </block>
+            <block wx:if='{{currentSelectId!==index}}'>
+                <icon type="success" size="20" color='white' />
+            </block>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view class="btn-confirm" bindtap="onConfirmSubmit" data-status="confirm">投递</view>
+    </view>
+</view>

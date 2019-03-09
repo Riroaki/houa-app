@@ -1,0 +1,59 @@
+<!-- 简历列表 -->
+<view wx:for='{{resumes}}' class='card' id='head'>
+    <view class='row'>
+        <view class='left'>
+            <!-- 第一行，简历名称和icon -->
+            <view class='innerRow'>
+                <text class='name'>{{item.name}}</text>
+                <i-icon type="brush" size='16' color='#888' bindtap='editName' id='{{index}}' />
+            </view>
+            <!-- 第二行，简历描述 -->
+            <view class='innerRow'>
+                <text class='description'>{{item.description}}</text>
+            </view>
+        </view>
+        <view class='right' bindtap='seeDetail' bindlongpress='deleteThis' id='{{index}}'>
+            <view class='divLineVertical'></view>
+            <i-icon class='enterIcon' type="enter" size='20' />
+        </view>
+    </view>
+</view>
+<!-- 添加新简历 -->
+<view class='card' id='head' bindtap='addResume'>
+    <view class='centerRow'>
+        <i-icon type="add" size='25' color='#888' />
+        <text id='addMore'>添加新简历</text>
+    </view>
+</view>
+
+<!-- 编辑成功提示 -->
+<i-toast id="toast" />
+
+<!-- 编辑简历名字和描述的弹出窗口 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showEditModal}}"></view>
+<view class="modal-dialog" wx:if="{{showEditModal}}">
+    <view class="modal-content">
+        <view class="modal-input">
+            <textarea id='nameEdit' maxlength='15' value='{{currentVal.name}}' bindinput='inputChange'></textarea>
+            <view class='divLine'></view>
+            <textarea id='descriptionEdit' maxlength='30' value='{{currentVal.description}}' bindinput='inputChange'></textarea>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">保存</view>
+    </view>
+</view>
+
+<!-- 删除简历的弹窗 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showDeleteModal}}"></view>
+<view class="modal-dialog" wx:if="{{showDeleteModal}}">
+    <view class="modal-content">
+        <!-- 标题和描述内容 -->
+        <text class="modal-title">是否要删除该简历？</text>
+        <text class='modal-description'>删除后将无法找回</text>
+    </view>
+    <view class="modal-footer">
+        <view class="btn-confirm-half" bindtap="onConfirmDelete" data-status="confirm">删除</view>
+        <view class="btn-cancel-half" bindtap="onCancelDelete" data-status="confirm">取消</view>
+    </view>
+</view>

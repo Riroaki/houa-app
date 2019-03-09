@@ -1,0 +1,49 @@
+page {
+    background-color: #F4F4F4;
+}
+
+.swiper {
+    height: 300rpx;
+    width: 100%;
+}
+
+.swiper image {
+    height: 100%;
+    width: 100%;
+}
+
+#offLine {
+    font-size: 60;
+    color: #888;
+    text-align:center;
+}
+
+.post-card {
+    width: 94%;
+    height: 500rpx;
+    margin: 3%;
+    box-shadow: 2rpx 2rpx 2rpx #888;
+    border-radius: 5rpx;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.post-thumb {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.post-title {
+    font-size: 35rpx;
+    font-weight: 600;
+    margin: 2% 5% 0;
+}
+
+.post-subtitle {
+    font-size: 30rpx;
+    font-weight: 300;
+    color: #888;
+    margin: 1% 5% 2%;
+}

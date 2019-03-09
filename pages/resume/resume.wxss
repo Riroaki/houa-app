@@ -1,0 +1,192 @@
+page {
+    background-color: #f4f4f4;
+}
+
+.card {
+    width: 94%;
+    margin: 3%;
+    box-shadow: 2rpx 2rpx 2rpx #888;
+    border-radius: 5rpx;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 3%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.innerRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.right {
+    height: 100rpx;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /*垂直居中*/
+    justify-content: space-around;
+}
+
+.divLineVertical {
+    background: #e0e3da;
+    width: 3rpx;
+    height: 96%;
+}
+
+.name {
+    font-size: 30rpx;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 20rpx;
+    font-weight: 600;
+    color: #888;
+}
+
+.centerRow {
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addMore {
+    font-size: 30rpx;
+    color: #888;
+    font-weight: 600;
+}
+
+/* 编辑简历标题的弹窗 */
+
+.show-btn {
+    margin-top: 100rpx;
+    color: #2c2;
+}
+
+.modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+}
+
+.modal-dialog {
+    width: 540rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 9999;
+    background: white;
+    margin: -180rpx 105rpx;
+    border-radius: 0;
+}
+
+.modal-content {
+    padding: 50rpx 32rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-input {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 4rpx;
+}
+
+.divLine {
+    background: #e0e3da;
+    width: 98%;
+    height: 3rpx;
+    margin: 10rpx auto;
+}
+
+#nameEdit {
+    font-size: 35rpx;
+    height: 60rpx;
+    font-weight: 900;
+    border: none;
+}
+
+#descriptionEdit {
+    margin-top: 30rpx;
+    font-size: 25rpx;
+    height: 90rpx;
+    font-weight: 600;
+    color: #888;
+    border: none;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    height: 86rpx;
+    font-size: 34rpx;
+    line-height: 86rpx;
+}
+
+.btn-confirm {
+    width: 100%;
+    color: white;
+    background-color: #21b046;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 900;
+}
+
+/* 删除简历的弹窗 */
+
+.modal-title {
+    padding-top: 50rpx;
+    font-size: 36rpx;
+    color: #030303;
+    text-align: center;
+    margin: 0 auto 5%;
+}
+
+.modal-description {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #888;
+    text-align: center;
+}
+
+.btn-confirm-half {
+    width: 50%;
+    color: white;
+    background-color: orange;
+    font-size: 30rpx;
+    font-weight: 900;
+    text-align: center;
+}
+
+.btn-cancel-half {
+    width: 50%;
+    color: white;
+    background-color: #21b046;
+    font-size: 30rpx;
+    font-weight: 900;
+    text-align: center;
+}

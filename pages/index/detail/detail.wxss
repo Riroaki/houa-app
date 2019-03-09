@@ -1,0 +1,236 @@
+/* pages/index/detail.wxss */
+
+#container {
+    margin: 8%;
+}
+
+/* 标题信息 */
+
+#title {
+    font-weight: 900;
+    font-size: 40rpx;
+}
+
+#place, #salary, #workload {
+    font-size: 30rpx;
+}
+
+#salary {
+    font-weight: 600;
+    color: #21b046;
+}
+
+#workload, #place {
+    color: gray;
+}
+
+/* 投递方式一栏 */
+
+#logo {
+    display: inline-block;
+    max-width: 140rpx;
+    max-height: 140rpx;
+    margin: 0 30rpx;
+}
+
+#submitArea {
+    display: inline-block;
+    /* margin-top: -5%; */
+}
+
+#submitTitle {
+    font-size: 30rpx;
+    font-weight: 900;
+}
+
+#email {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: gray;
+}
+
+#submitContent {
+    font-size: 25rpx;
+    color: gray;
+}
+
+#copyBtn {
+    color: #21b046;
+    background-color: white;
+    border-color: #21b046;
+    font-size: 20rpx;
+    font-weight: 600;
+    top: 60rpx;
+    width: 100rpx;
+    float: right;
+}
+
+/* 分割线 */
+
+.divLine {
+    background: #e0e3da;
+    width: 96%;
+    height: 3rpx;
+    margin: 4% auto;
+}
+
+/* 详情区域 */
+
+#detailTitle {
+    font-size: 30rpx;
+    font-weight: 900;
+    margin: 2% 0;
+}
+
+#detailContent {
+    font-size: 30rpx;
+    font-weight: 300;
+    width: 90%;
+    margin: 0 auto;
+    word-break: break-all;
+}
+
+/* 按钮区域 */
+
+#buttonGroup {
+    position: fixed;
+    height: 8%;
+    width: 100%;
+    bottom: 0;
+    border-top: 1rpx solid lightgray;
+}
+
+.icon, #submit {
+    display: inline-block;
+}
+
+.icon {
+    width: 10%;
+    margin: 0 0 0 3%;
+}
+
+#submit {
+    float: right;
+    bottom: 0;
+    width: 55%;
+    height: 100%;
+    background: #21b046;
+    border-radius: 0;
+    border: none;
+    color: white;
+    font-size: 37rpx;
+    font-weight: 900;
+    margin-left: 30rpx;
+}
+
+#submit::after {
+    border-radius: 0;
+}
+
+.submit-hover {
+    color: #025f16;
+}
+
+/* 小字 */
+
+#tip {
+    font-size: 20rpx;
+    font-weight: 600;
+}
+
+/* 按钮标注 */
+
+#iconTextGroup {
+    position: fixed;
+    bottom: 10rpx;
+    left: 10rpx;
+    width: 100%;
+}
+
+.iconText {
+    font-size: 25rpx;
+    color: #888;
+    font-weight: 400;
+    /* display: inline; */
+    width: 10%;
+    margin: 0 5% 0 2%;
+}
+
+/* 推荐图标 */
+
+#recommand {
+    position: fixed;
+    bottom: 6%;
+    right: 48%;
+    max-height: 4%;
+    max-width: 5%;
+    z-index: 1;
+}
+
+/* 投递弹窗 */
+.modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+}
+
+.modal-dialog {
+    width: 540rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 9999;
+    background: white;
+    margin: -180rpx 105rpx;
+    border-radius: 0;
+}
+
+.modal-content {
+    padding: 50rpx 32rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    font-size: 35rpx;
+    font-weight: 600;
+    color: #030303;
+    margin: 0 4%;
+}
+
+.modal-description {
+    font-size: 30rpx;
+    font-weight: 300;
+    color: #888;
+}
+
+.resumeRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    height: 86rpx;
+    font-size: 34rpx;
+    line-height: 86rpx;
+}
+
+.btn-confirm {
+    width: 100%;
+    color: white;
+    background-color: #21b046;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 900;
+}
