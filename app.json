@@ -1,55 +1,56 @@
 {
-    "pages": [
-        "pages/welcome/welcome",
-        "pages/index/index",
-        "pages/index/detail/detail",
-        "pages/condition/condition",
-        "pages/news/news",
-        "pages/news/detail/detail",
-        "pages/mine/mine",
-        "pages/mine/favor/favor",
-        "pages/mine/feedback/feedback",
-        "pages/resume/resume",
-        "pages/resume/detail/detail",
-        "pages/apply/apply"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#21b046",
-        "navigationBarTitleText": "猴啊求职",
-        "navigationBarTextStyle": "white",
-        "enablePullDownRefresh": true
-    },
-    "networkTimeout": {
-        "request": 10000,
-        "connectSocket": 10000,
-        "uploadFile": 10000,
-        "downloadFile": 10000
-    },
-    "tabBar": {
-        "color": "#a9b7b7",
-        "selectedColor": "#21B046",
-        "borderStyle": "white",
-        "backgroundColor": "#fff",
-        "list": [
-            {
-                "selectedIconPath": "img/tabBar/index-selected.png",
-                "iconPath": "img/tabBar/index.png",
-                "pagePath": "pages/index/index",
-                "text": "首页"
-            },
-            {
-                "selectedIconPath": "img/tabBar/news-selected.png",
-                "iconPath": "img/tabBar/news.png",
-                "pagePath": "pages/news/news",
-                "text": "资讯"
-            },
-            {
-                "selectedIconPath": "img/tabBar/mine-selected.png",
-                "iconPath": "img/tabBar/mine.png",
-                "pagePath": "pages/mine/mine",
-                "text": "我的"
-            }
-        ]
-    }
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/index/detail/detail",
+    "pages/condition/condition",
+    "pages/news/news",
+    "pages/news/detail/detail",
+    "pages/mine/mine",
+    "pages/mine/favor/favor",
+    "pages/mine/feedback/feedback",
+    "pages/resume/resume",
+    "pages/resume/detail/detail",
+    "pages/apply/apply"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#21b046",
+    "navigationBarTitleText": "猴啊求职",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#21B046",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "img/tabBar/index-selected.png",
+        "iconPath": "img/tabBar/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/tabBar/news-selected.png",
+        "iconPath": "img/tabBar/news.png",
+        "pagePath": "pages/news/news",
+        "text": "资讯"
+      },
+      {
+        "selectedIconPath": "img/tabBar/mine-selected.png",
+        "iconPath": "img/tabBar/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

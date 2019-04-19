@@ -90,8 +90,29 @@ Page({
         WxSearch.wxSearchAddHisKey(that);
         var words = that.data.wxSearchData.value;
         // 将words发送到服务器请求数据
-        console.log(words);
-        // 处理搜索到的数据。。。
+        wx.request({
+          //TODO: 修改为真实URL
+          url: 'http://localhost:8080/search/job_data',
+          data: {
+            key: words
+            //TODO: 加入更多的请求参数……
+          },
+          header: {
+            'content-type': 'application/json'
+          },
+          method: 'POST',
+          success(res) {
+            //处理搜索到的数据
+            console.log(res.data.code);
+            console.log(res.data.msg);
+            console.log(res.data.data[0]);
+            console.log(res.data.data[0].title);
+          },
+          fail(err) {
+            //网络错误的情况
+            console.log(err);
+          }
+        })
     },
 
     // 查看详情
